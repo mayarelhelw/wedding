@@ -70,8 +70,14 @@
       document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(sectionId).classList.add('active');
     }
+
     window.onload = function() {
-      showSection('nervanaSection');
+      const hash = window.location.hash;
+      if (hash === "#sahlalaSection") {
+        showSection("sahlalaSection");
+      } else {
+        showSection("nervanaSection");
+      }
     };
   </script>
 </head>
@@ -81,13 +87,13 @@
     <h2>دليل الخدمات والمميزات</h2>
 
     <div class="buttons">
-      <button class="btn" onclick="showSection('nervanaSection')">نرڤانا</button>
-      <button class="btn" onclick="showSection('sahlalaSection')">صهلله</button>
+      <a href="#nervanaSection" class="btn">نرڤانا</a>
+      <a href="#sahlalaSection" class="btn">صهلله</a>
       <a href="https://wa.me/201222658227" class="btn" target="_blank">احجز الآن (نرفانا)</a>
       <a href="https://wa.me/201069199993" class="btn" target="_blank">احجز الآن (صهلله)</a>
     </div>
 
-    <div id="nervanaSection" class="content-section active">
+    <div id="nervanaSection" class="content-section">
       <h1>بنود أساسية</h1>
       <section>
         <ul>
@@ -180,7 +186,7 @@
 
     <div class="footer">
       نقابة المحامين – 01050280060 – مصطفى الحلو – 01222658227 – 01069199993 – محمود الحلو<br>
-      البريد الإلكتروني: <a href="mailto:nervana&amp;sahlalh@facebook.com" style="color: #fff; text-decoration: underline;">https://web.facebook.com/Nervana.Sahlala</a>
+      <a href="https://web.facebook.com/Nervana.Sahlala" target="_blank" style="color: #fff; text-decoration: underline;">صفحتنا على فيسبوك</a>
     </div>
   </div>
 </body>
